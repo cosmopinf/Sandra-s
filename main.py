@@ -9,8 +9,8 @@ TOKEN = os.getenv("BOT_TOKEN")
 
 # Tugmalar
 main_menu = [
-    ["ℹ️ About", "💬 Help"],
-    ["📞 Contact"]
+    ["ℹ️ Biz haqimizda", "💬 Savol va murojatlar uchun"],
+    ["📞  Biz bilan aloqa "]
 ]
 
 # /start komandasi
@@ -27,24 +27,24 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if "about" in text:
         await update.message.reply_text(
-            "ℹ️ **Bot haqida:**\n\n"
+            "ℹ️ **Biz haqimizda:**\n\n"
             "Bu bot Python yordamida yaratilgan oddiy namuna bo‘lib, foydalanuvchi bilan interaktiv muloqot qilishni o‘rgatadi.\n\n"
             "Dasturlash tili: Python 🐍\nKutubxona: python-telegram-bot"
         )
     elif "help" in text:
         await update.message.reply_text(
-            "💬 **Yordam:**\n\n"
+            "💬 **Savol va murojatlar uchun:**\n\n"
             "Siz quyidagi buyruqlardan foydalanishingiz mumkin:\n"
             "/start – Botni ishga tushirish\n"
-            "ℹ️ About – Bot haqida\n"
-            "📞 Contact – Bizga ulanish\n\n"
+            "ℹ️ Biz haqimizda – Bot haqida\n"
+            "📞 Biz bilan aloqa – Bizga ulanish\n\n"
             "Yoki istalgan so‘rov yuboring, men sizga javob qaytaraman 😊"
         )
     elif "contact" in text:
         await update.message.reply_text(
             "📞 **Bizga ulaning:**\n\n"
-            "Email: example@email.com\n"
-            "Telegram: @YourUsername\n"
+            "Email: saodatalimova9@gmail.com\n"
+            "Telegram: @cosmopinf\n"
             "Web: https://yourwebsite.com"
         )
     else:
