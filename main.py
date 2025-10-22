@@ -10,7 +10,7 @@ TOKEN = os.getenv("BOT_TOKEN")
 # Tugmalar
 main_menu = [
     ["ℹ️ Biz haqimizda", "💬 Savol va murojaatlar uchun"],
-    ["📞 Biz bilan aloqa"]
+    ["📞 Biz bilan aloqa", "🤝 Hamkorlik uchun"]
 ]
 
 # /start komandasi
@@ -28,24 +28,31 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if "biz haqimizda" in text:
         await update.message.reply_text(
             "ℹ️ **Biz haqimizda:**\n\n"
-            "Bu bot Python yordamida yaratilgan oddiy namuna bo‘lib, foydalanuvchi bilan interaktiv muloqot qilishni o‘rgatadi.\n\n"
-            "Dasturlash tili: Python 🐍\nKutubxona: python-telegram-bot"
+            "Bu bot foydalanuvchilar bilan interaktiv muloqot qilishni namoyish etish uchun yaratilgan.\n"
+            "Dasturlash tili: Python 🐍\nKutubxona: python-telegram-bot\n\n"
+            "Biz innovatsion ta’lim va texnologik loyihalarni rivojlantirishga e’tibor qaratamiz."
         )
 
     elif "savol" in text or "murojaat" in text:
         await update.message.reply_text(
             "💬 **Savol va murojaatlar uchun:**\n\n"
-            "Siz quyidagi buyruqlardan foydalanishingiz mumkin:\n"
-            "/start – Botni ishga tushirish\n"
-            "ℹ️ Biz haqimizda – Bot haqida\n"
-            "📞 Biz bilan aloqa – Bizga ulanish\n\n"
-            "Yoki istalgan so‘rov yuboring, men sizga javob qaytaraman 😊"
+            "Siz bot orqali o‘z fikringiz, taklifingiz yoki savollaringizni yozishingiz mumkin.\n"
+            "Biz imkon qadar tezroq javob beramiz. 😊"
         )
 
     elif "aloqa" in text:
         await update.message.reply_text(
             "📞 **Biz bilan aloqa:**\n\n"
             "✉️ Gmail: saodatalimova9@gmail.com\n"
+            "💬 Telegram: @cosmopinf"
+        )
+
+    elif "hamkorlik" in text:
+        await update.message.reply_text(
+            "🤝 **Hamkorlik uchun:**\n\n"
+            "Agar siz hamkorlik qilishni xohlasangiz yoki qo‘shma loyihalar haqida gaplashmoqchi bo‘lsangiz,\n"
+            "biz bilan quyidagi manzillar orqali bog‘laning:\n\n"
+            "📧 Gmail: saodatalimova9@gmail.com\n"
             "💬 Telegram: @cosmopinf"
         )
 
